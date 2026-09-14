@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #050506;
+  --bg-elevated: #0c0c10;
+  --bg-elevated-2: #101014;
+  --pink: #ff1f8f;
+  --pink-soft: rgba(255, 31, 143, 0.12);
+  --purple: #7c2ee8;
+  --ink: #f3f3f6;
+  --muted: #8b8b93;
+  --line: rgba(255, 255, 255, 0.08);
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-mono-jb);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body:not(.hero-intro-complete) {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-return-view { opacity: 0; }
+.portfolio-return-view.is-restored { opacity: 1; }
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--pink);
+  opacity: 0.85;
+}
+
+.container-nexa {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-nexa {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+.section-divider {
+  border-top: 1px solid var(--line);
+}
+
+#servicos,
+#como-criamos,
+#sobre,
+#duvidas,
+#contato {
+  scroll-margin-top: 72px;
+}
+
+::selection {
+  background: var(--pink);
+  color: #000;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.glow-btn {
+  box-shadow: 0 0 0 rgba(255, 31, 143, 0);
+  transition: box-shadow 0.35s ease, transform 0.25s ease;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 36px rgba(255, 31, 143, 0.45);
+  transform: translateY(-1px);
+}

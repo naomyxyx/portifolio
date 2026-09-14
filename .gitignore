@@ -1,0 +1,36 @@
+# Dependências
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Vercel
+.vercel/
+
+# Variáveis locais e privadas
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs e caches
+*.log
+*.tsbuildinfo
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Arquivos internos das ferramentas locais
+.claude/
+.codex-patch/
+.codex-patch-btech/
+
+# Modelos antigos do avatar que não fazem parte do site
+avatar-v4/
+avatar-v5/
+avatar-v6/
+avatar-v7/
+*.blend
+*.blend1
