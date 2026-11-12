@@ -81,15 +81,15 @@ export default function HowWeCreate() {
     setActive((current) => (current + direction + STEPS.length) % STEPS.length);
   }
 
-  return <section id="como-criamos" className="process-section section-divider bg-black py-24 md:py-32">
+  return <section id="como-criamos" className="process-section section-divider scroll-reveal-section bg-black py-24 md:py-32">
     <div className="container-nexa">
-      <div className="process-heading mb-12 md:mb-16">
+      <div className="process-heading mb-12 md:mb-16" data-scroll-reveal="1">
         <span className="eyebrow">Processo</span>
         <h2 className="mt-4 font-display text-[clamp(38px,6vw,76px)] font-semibold leading-[0.95] tracking-[-0.055em]">Como criamos</h2>
-        <p className="process-heading__intro">Cada projeto começa com contexto e termina com uma presença digital pronta para aproximar sua marca das pessoas certas.</p>
+        <p className="process-heading__intro">Você acompanha as decisões durante todo o processo. Organizamos objetivos, conteúdo e direção visual antes de transformar a ideia em uma interface pronta para publicação.</p>
       </div>
 
-      <div className="process-experience">
+      <div className="process-experience" data-scroll-reveal="2">
         <div className="process-steps" aria-label="Etapas do processo">
           {STEPS.map((step, index) => {
             const selected = active === index;

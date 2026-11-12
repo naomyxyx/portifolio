@@ -5,6 +5,8 @@ import HowWeCreate from "@/components/HowWeCreate";
 import About from "@/components/About";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
+import CommercialOffer from "@/components/CommercialOffer";
+import ScrollRevealController from "@/components/ScrollRevealController";
 
 type HomeProps = {
   searchParams: Promise<{ retorno?: string; posicao?: string }>;
@@ -18,9 +20,11 @@ export default async function Home({ searchParams }: HomeProps) {
   return (
     <div className={returningToServices ? "portfolio-return-view" : undefined}>
       <Navbar />
+      <ScrollRevealController />
       <main>
         <Hero skipIntro={returningToServices} returnPosition={returnPosition} />
         <HoverExpandShowcase />
+        <CommercialOffer />
         <HowWeCreate />
         <About />
         <Faq />

@@ -505,11 +505,11 @@
   }
   16% { opacity: 1; }
   78% {
-    transform: translate3d(0, -3px, 0) rotateY(8deg) rotateZ(-1.6deg) scale(1.015);
+    transform: translate3d(0, -3px, 0) rotateY(8deg) rotateZ(-0.35deg) scale(1.015);
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) rotateY(0deg) rotateZ(-1.2deg) scale(1);
+    transform: translate3d(0, 0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
   }
 }
 
@@ -538,5 +538,23 @@
 
 @keyframes metal-card-arrival-mobile {
   from { opacity: 0; transform: translate3d(0, 26px, 0) rotateZ(-2deg) scale(0.96); }
-  to { opacity: 1; transform: translate3d(0, 0, 0) rotateZ(-1deg) scale(1); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) rotateZ(0deg) scale(1); }
+}
+
+.about-trust {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.about-trust div { min-height: 126px; background: #0b0b0e; padding: 20px; }
+.about-trust b { display: block; color: var(--pink); font: 500 8px var(--font-mono); letter-spacing: .14em; text-transform: uppercase; }
+.about-trust span { display: block; margin-top: 13px; color: #aaaab1; font-size: 11px; line-height: 1.65; }
+
+@media (max-width: 600px) {
+  .about-trust { grid-template-columns: 1fr; margin-top: 25px; }
+  .about-trust div { min-height: 0; padding: 18px; }
 }

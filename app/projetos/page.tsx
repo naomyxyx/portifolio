@@ -14,9 +14,9 @@ type RealProject = {
 const REAL_PROJECTS: RealProject[] = [
   {
     title: "BTech Assistência Técnica",
-    segment: "Tecnologia & reparos",
+    segment: "Projeto real · publicado",
     description:
-      "A BTech precisava apresentar seus serviços com clareza e transformar dúvidas em pedidos de orçamento. Criamos uma experiência responsiva, direta e conectada ao WhatsApp.",
+      "Um site responsivo criado para apresentar os serviços com clareza, fortalecer a presença digital da empresa e facilitar pedidos de orçamento pelo WhatsApp.",
     role: "Estratégia, interface e desenvolvimento front-end",
     technologies: ["Design responsivo", "Jornada de orçamento", "Integração WhatsApp"],
     url: "https://btech-assistencia.vercel.app",
@@ -78,7 +78,7 @@ export default async function ProjectsPage({ searchParams }: ProjectsPageProps) 
                 <small>{project.role}</small>
                 <div>{project.technologies.map((technology) => <i key={technology}>{technology}</i>)}</div>
                 <a href={project.url} target="_blank" rel="noreferrer">
-                  <span>Visitar projeto</span>
+                  <span>Visitar o site</span>
                   <b aria-hidden="true" />
                 </a>
               </div>

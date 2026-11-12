@@ -141,11 +141,11 @@ export default function HoverExpandShowcase() {
           <div>
             <span className="eyebrow">Possibilidades</span>
             <h2 className="mt-4 max-w-4xl font-display text-[clamp(28px,3.7vw,48px)] font-semibold leading-[1.02] tracking-[-0.045em]">
-              Cada negócio pede uma experiência própria.
+              Cada negócio pede uma <span className="section-title-accent">experiência própria.</span>
             </h2>
           </div>
           <p className="max-w-md text-sm leading-7 text-[var(--muted)] md:justify-self-end">
-            Explore como conteúdo, interface e interação podem se adaptar a clínicas, restaurantes, academias, serviços e outros projetos.
+            Cada site é planejado de acordo com o público, os objetivos e a personalidade do negócio. Explore algumas direções que uma presença digital pode assumir.
           </p>
         </div>
 
@@ -181,11 +181,11 @@ export default function HoverExpandShowcase() {
           <span className="real-projects-folder__tab">PROJETOS REAIS</span>
           <span className="real-projects-folder__copy">
             <small>TRABALHOS PUBLICADOS</small>
-            <strong>Projetos que já ganharam vida.</strong>
-            <span>Conheça os trabalhos concluídos e acesse as experiências online.</span>
+            <strong>Projetos construídos para negócios reais.</strong>
+            <span>Conheça projetos desenvolvidos para organizar informações, fortalecer marcas e aproximar negócios de seus clientes.</span>
           </span>
           <span className="real-projects-folder__action">
-            Explorar projetos reais
+            Ver projetos publicados
             <span className="real-projects-folder__arrow" aria-hidden="true">
               <svg viewBox="0 0 20 20" focusable="false">
                 <path d="M5 15 15 5M7 5h8v8" />

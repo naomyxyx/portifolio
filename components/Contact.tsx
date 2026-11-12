@@ -1,27 +1,30 @@
+import { WHATSAPP_URL } from "@/lib/contact";
+
 export default function Contact() {
   return (
-    <section id="contato" className="contact-section section-divider">
+    <section id="contato" className="contact-section section-divider scroll-reveal-section">
       <div className="contact-grid" aria-hidden="true" />
       <div className="contact-orbit contact-orbit--one" aria-hidden="true" />
       <div className="contact-orbit contact-orbit--two" aria-hidden="true" />
 
       <div className="container-nexa contact-container">
-        <div className="contact-status">
+        <div className="contact-status" data-scroll-reveal="1">
           <span><i /> DISPONÍVEL PARA NOVOS PROJETOS</span>
           <b>NEXT TO YOU / ONLINE</b>
         </div>
 
         <div className="contact-main">
-          <div className="contact-copy">
+          <div className="contact-copy" data-scroll-reveal="2">
             <span className="eyebrow">Vamos conversar</span>
-            <h2>Sua próxima ideia<br />pode começar aqui.</h2>
+            <h2>Vamos entender o que<br />seu negócio <span className="section-title-accent">precisa construir.</span></h2>
             <p>
-              Conte o que você imagina, o momento do seu negócio e onde gostaria de chegar. A partir disso, organizamos o caminho e construímos lado a lado.
+              Conte um pouco sobre sua ideia, o momento do negócio e o resultado que espera alcançar. A primeira conversa serve para organizar as possibilidades e identificar o melhor caminho.
             </p>
 
             <a
               className="contact-cta"
-              href="https://wa.me/5511912280890?text=Ol%C3%A1%2C%20Naomy!%20Conheci%20seu%20trabalho%20pela%20NX2Y%20e%20quero%20conversar%20sobre%20um%20site%20para%20meu%20neg%C3%B3cio."
+              data-track-event="whatsapp_click" data-track-location="contact"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
             >
@@ -34,12 +37,13 @@ export default function Contact() {
             </a>
 
             <div className="contact-channels" aria-label="Outros canais de contato">
-              <a href="mailto:naomy4612@gmail.com">E-MAIL</a>
+              <a href="mailto:naomy4612@gmail.com" data-track-event="email_click" data-track-location="contact">E-MAIL</a>
               <a href="https://br.linkedin.com/in/naomy-matos-427567269" target="_blank" rel="noreferrer">LINKEDIN</a>
+              <a href="https://www.instagram.com/nx2y.web/" target="_blank" rel="noreferrer" data-track-event="instagram_click" data-track-location="contact">INSTAGRAM</a>
             </div>
           </div>
 
-          <div className="contact-panel">
+          <div className="contact-panel" data-scroll-reveal="3">
             <div className="contact-panel__corners" aria-hidden="true"><i /><i /><i /><i /></div>
             <span className="contact-panel__label">INFORMAÇÕES PARA COMEÇAR</span>
             <div className="contact-prompt">
@@ -57,8 +61,9 @@ export default function Contact() {
           </div>
         </div>
 
-        <footer className="contact-footer">
+        <footer className="contact-footer" data-scroll-reveal="4">
           <strong>NX2Y</strong>
+          <a href="https://www.instagram.com/nx2y.web/" target="_blank" rel="noreferrer" data-track-event="instagram_click" data-track-location="footer">@NX2Y.WEB</a>
           <span>NAOMY · DESENVOLVEDORA FRONT-END</span>
           <span>© {new Date().getFullYear()}</span>
         </footer>

@@ -72,12 +72,12 @@ export default function About() {
   }, []);
 
   return (
-    <section id="sobre" className="about-section section-divider">
+    <section id="sobre" className="about-section section-divider scroll-reveal-section">
       <div className="container-nexa">
-        <div className="about-heading">
+        <div className="about-heading" data-scroll-reveal="1">
           <div>
             <span className="eyebrow">Por trás da NX2Y</span>
-            <h2>Da análise à interface,<br />lado a lado.</h2>
+            <h2>Da análise à interface,<br /><span className="section-title-accent">lado a lado.</span></h2>
           </div>
         </div>
 
@@ -85,6 +85,7 @@ export default function About() {
           <div
             ref={cardStageRef}
             className={`about-identity${cardVisible ? " is-card-visible" : ""}`}
+            data-scroll-reveal="2"
             aria-label="Carta de apresentação de Naomy, desenvolvedora front-end"
           >
             <div className="about-metal-card">
@@ -104,6 +105,7 @@ export default function About() {
                       src="/images/naomy-seven-hearts-v2.png"
                       width={1080}
                       height={1457}
+                      unoptimized
                       sizes="(max-width: 600px) 68vw, (max-width: 900px) 340px, 24vw"
                       alt="Carta sete de copas personalizada com ilustração de Naomy"
                       priority={false}
@@ -124,7 +126,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-content">
+          <div className="about-content" data-scroll-reveal="3">
             <p className="about-content__intro">
               Sou Naomy, desenvolvedora front-end e também em formação na área de dados.
             </p>
@@ -161,6 +163,12 @@ export default function About() {
                   <small>{item.detail}</small>
                 </button>
               ))}
+            </div>
+
+            <div className="about-trust" aria-label="Compromissos da NX2Y">
+              <div><b>Atendimento próximo</b><span>Você conversa diretamente comigo durante todo o projeto.</span></div>
+              <div><b>Processo organizado</b><span>Cada etapa, entrega e decisão é apresentada com clareza.</span></div>
+              <div><b>Pronto para publicação</b><span>O site é preparado para diferentes telas e para entrar no ar.</span></div>
             </div>
           </div>
         </div>

@@ -93,6 +93,7 @@
 .mobile-glass-menu.is-open .mobile-glass-menu__link:nth-of-type(3) { transition-delay: 130ms; }
 .mobile-glass-menu.is-open .mobile-glass-menu__link:nth-of-type(4) { transition-delay: 165ms; }
 .mobile-glass-menu.is-open .mobile-glass-menu__link:nth-of-type(5) { transition-delay: 200ms; }
+.mobile-glass-menu.is-open .mobile-glass-menu__link:nth-of-type(6) { transition-delay: 235ms; }
 
 .mobile-glass-menu__cta {
   display: flex;
@@ -120,4 +121,17 @@
 .mobile-glass-menu__cta:focus-visible {
   background: #ff53ae;
   color: #08080a;
+}
+
+.mobile-glass-menu__cta-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.mobile-glass-menu__cta-icon path {
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }

@@ -8,8 +8,8 @@ const QUESTIONS = [
     answer: "O prazo depende da complexidade do projeto. Depois da primeira conversa, organizamos as etapas e definimos um cronograma claro para a construção.",
   },
   {
-    question: "Posso solicitar alterações?",
-    answer: "Sim. O processo inclui momentos de apresentação e refinamento para que as decisões sejam avaliadas antes da publicação.",
+    question: "Posso acompanhar e solicitar ajustes durante o projeto?",
+    answer: "Sim. O projeto possui momentos de apresentação e refinamento para que você acompanhe as decisões e solicite ajustes antes da publicação.",
   },
   {
     question: "Você também cria a identidade visual?",
@@ -24,6 +24,10 @@ const QUESTIONS = [
     answer: "Sim. A estrutura pode ser planejada para crescer com o negócio, permitindo novas páginas, conteúdos e funcionalidades no futuro.",
   },
   {
+    question: "Como recebo o orçamento?",
+    answer: "Depois de entender o momento do negócio e o que o site precisa oferecer, preparo uma proposta com escopo, etapas, prazo e investimento. A conversa inicial não gera compromisso de contratação.",
+  },
+  {
     question: "Existe suporte após a publicação?",
     answer: "Sim. Posso oferecer um período de acompanhamento depois que o site for publicado e, se você precisar, também podemos combinar uma manutenção contínua. O formato do suporte será definido de acordo com as necessidades do projeto e com o nível de acompanhamento que fizer sentido para você.",
   },
@@ -33,12 +37,12 @@ export default function Faq() {
   const [active, setActive] = useState<number | null>(0);
 
   return (
-    <section id="duvidas" className="faq-section section-divider">
+    <section id="duvidas" className="faq-section section-divider scroll-reveal-section">
       <div className="faq-grid" aria-hidden="true" />
       <div className="faq-scan" aria-hidden="true" />
 
       <div className="container-nexa faq-container">
-        <div className="faq-heading">
+        <div className="faq-heading" data-scroll-reveal="1">
           <div>
             <h2>Dúvidas frequentes</h2>
           </div>
@@ -47,7 +51,7 @@ export default function Faq() {
           </p>
         </div>
 
-        <div className="faq-list">
+        <div className="faq-list" data-scroll-reveal-group>
           {QUESTIONS.map((item, index) => {
             const open = active === index;
             return (

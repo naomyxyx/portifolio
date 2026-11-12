@@ -1,0 +1,16 @@
+.privacy-settings { position: fixed; bottom: 10px; left: 12px; z-index: 100; padding: 8px 12px; background: #101014; border: 1px solid #666; border-radius: 20px; color: #fff; font-size: 11px; cursor: pointer; }
+.privacy-banner { position: fixed; bottom: 54px; left: 12px; z-index: 101; width: min(520px, calc(100% - 24px)); max-height: calc(100dvh - 80px); overflow-y: auto; padding: 24px; border: 1px solid var(--pink); border-radius: 18px; background: #101014; color: #f5f5f5; box-shadow: 0 12px 40px #0009; }
+.privacy-banner h2 { font-size: 21px; font-weight: 600; }
+.privacy-banner p { margin-top: 12px; font-size: 13px; line-height: 1.6; }
+.privacy-banner a, .privacy-page a { color: var(--pink); text-decoration: underline; }
+.privacy-banner label { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-size: 13px; }
+.privacy-banner input { width: 18px; height: 18px; accent-color: var(--pink); }
+.privacy-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.privacy-actions button { flex: 1 1 130px; min-height: 44px; border: 1px solid #aaa; border-radius: 10px; padding: 10px; color: #fff; background: #18181d; cursor: pointer; font-size: 13px; }
+.privacy-actions button:hover { border-color: var(--pink); }
+.privacy-storage { position: fixed; bottom: 52px; left: 12px; z-index: 102; max-width: calc(100% - 24px); padding: 12px; background: #101014; color: #fff; font-size: 12px; }
+.privacy-page { max-width: 780px; padding: 60px 24px 120px; margin: auto; line-height: 1.8; }
+.privacy-page h1 { font-size: 32px; margin: 24px 0; }
+.privacy-page h2 { font-size: 22px; margin: 30px 0 12px; }
+.privacy-page p { margin-top: 12px; }
+body:has(.privacy-page) { position: static; overflow: auto !important; }

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 const LINKS = [
   { label: "Serviços", href: "#servicos" },
+  { label: "Investimento", href: "#investimento" },
   { label: "Como criamos", href: "#como-criamos" },
   { label: "Sobre", href: "#sobre" },
   { label: "Dúvidas", href: "#duvidas" },
@@ -58,6 +59,7 @@ export default function Navbar() {
 
         {/* CTA desktop */}
         <a
+          data-track-event="quote_click" data-track-location="nav_desktop"
           href="#contato"
           className="glow-btn hidden rounded-full border border-[var(--pink)] px-6 py-3 text-sm font-semibold text-[var(--pink)] transition-all duration-200 hover:bg-[var(--pink)] hover:text-black md:block"
         >
@@ -131,8 +133,17 @@ export default function Navbar() {
             tabIndex={open ? 0 : -1}
             onClick={() => setOpen(false)}
             className="mobile-glass-menu__cta"
+            data-track-event="quote_click" data-track-location="nav_mobile"
           >
-            Tenho uma ideia <span aria-hidden="true">↗</span>
+            Tenho uma ideia
+            <svg
+              className="mobile-glass-menu__cta-icon"
+              aria-hidden="true"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path d="M5 15 15 5M7 5h8v8" />
+            </svg>
           </a>
         </nav>
       </div>

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import TrackingConsent from "@/components/TrackingConsent";
+import "./styles/privacy.css";
 import localFont from "next/font/local";
 import "./global.css";
 import "./styles/hero.css";
@@ -6,6 +8,7 @@ import "./styles/process.css";
 import "./styles/navigation.css";
 import "./styles/about.css";
 import "./styles/showcase.css";
+import "./styles/commercial.css";
 import "./styles/faq-contact.css";
 import "./styles/projects.css";
 import "./styles/mobile.css";
@@ -33,11 +36,11 @@ const jbMono = localFont({
 
 export const metadata: Metadata = {
   title: "NX2Y — Next to You",
-  description: "Estratégias digitais e sites autorais para negócios que querem crescer, ser lembrados e transformar visitas em oportunidades.",
+  description: "Sites estratégicos, responsivos e autorais para apresentar negócios com clareza e transformar visitas em oportunidades.",
   metadataBase: new URL("https://nx2y.vercel.app"),
   openGraph: {
-    title: "NX2Y — Estratégias digitais para negócios que querem crescer",
-    description: "Sites autorais, responsivos e pensados para transformar visitas em oportunidades.",
+    title: "NX2Y — Sites estratégicos para negócios",
+    description: "Sites estratégicos, responsivos e autorais para apresentar negócios com clareza e transformar visitas em oportunidades.",
     url: "https://nx2y.vercel.app",
     siteName: "NX2Y",
     locale: "pt_BR",
@@ -46,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NX2Y — Estratégias digitais para negócios que querem crescer",
-    description: "Sites autorais, responsivos e pensados para transformar visitas em oportunidades.",
+    title: "NX2Y — Sites estratégicos para negócios",
+    description: "Sites estratégicos, responsivos e autorais para apresentar negócios com clareza e transformar visitas em oportunidades.",
   },
 };
 
@@ -57,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="pt-BR"
       className={`${spaceGrotesk.variable} ${inter.variable} ${jbMono.variable} h-full`}
     >
-      <body className="min-h-full bg-[var(--bg)] text-[var(--ink)]">{children}</body>
+      <body className="min-h-full bg-[var(--bg)] text-[var(--ink)]">{children}<TrackingConsent /></body>
     </html>
   );
 }
