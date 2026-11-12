@@ -58,7 +58,7 @@ export default function Hero({ skipIntro = false, returnPosition = 0 }: HeroProp
 
       <div className={`hero-message container-nexa ${formed ? "is-visible" : ""}`} aria-hidden={!formed}>
         <h1 className="hero-title font-display max-w-4xl font-semibold leading-[0.98] tracking-[-0.055em] text-[var(--ink)]">
-          Sites estratégicos para apresentar seu negócio e <span className="hero-title__accent">transformar visitas em oportunidades.</span>
+          Sites estratégicos para <span className="hero-title__accent">transformar seu negócio.</span>
         </h1>
         <p className="hero-subtitle">Desenvolvimento front-end, direção visual e uma experiência pensada para conectar sua marca às pessoas certas.</p>
         <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-track-event="quote_click" data-track-location="hero" className="glow-btn mt-8 inline-flex items-center rounded-full border border-[var(--pink)] px-6 py-3.5 text-sm font-semibold text-[var(--pink)] transition-colors hover:bg-[var(--pink)] hover:text-black">
