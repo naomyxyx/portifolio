@@ -29,11 +29,6 @@ export default function Contact() {
               rel="noreferrer"
             >
               <span>Conversar pelo WhatsApp</span>
-              <span className="contact-cta__arrow" aria-hidden="true">
-                <svg viewBox="0 0 20 20" focusable="false">
-                  <path d="M5 15 15 5M7 5h8v8" />
-                </svg>
-              </span>
             </a>
 
             <div className="contact-channels" aria-label="Outros canais de contato">
